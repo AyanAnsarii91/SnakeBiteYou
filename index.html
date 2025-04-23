@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags for SEO & Optimization -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="author" content="Ayan Ansari" />
+    <meta name="description"
+        content="Play the classic Snake Game with multiple difficulty levels, color customization, and dark mode!" />
+    <meta name="keywords"
+        content="Snake Game, JavaScript Game, HTML Game, CSS Game, Web Game, Ayan's Game, Responsive Game" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Title & Favicon -->
+    <title>Snake Game | Ayan's Edition</title>
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="game-title">🐍 Snake Game</h1>
+
+        <!-- Dark Mode Toggle -->
+        <button id="modeToggle" class="dark-mode-btn">Dark Mode</button>
+
+        <!-- Start Screen -->
+        <div id="startScreen" class="start-screen show">
+            <div class="start-content">
+                <label for="playerNameInput">Enter Player Name:</label>
+                <input type="text" id="playerNameInput" placeholder="Your Name" required />
+
+                <label for="difficulty">Select Difficulty:</label>
+                <select id="difficulty">
+                    <option value="150">Easy</option>
+                    <option value="100" selected>Medium</option>
+                    <option value="50">Hard</option>
+                </select>
+
+                <label for="snakeColor">Choose Snake Color:</label>
+                <input type="color" id="snakeColor" value="#6f4f1f" />
+
+                <button id="startButton" class="btn start-btn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Game Info Section -->
+        <div class="game-info">
+            <div id="playerName">Player: </div>
+            <div id="score">Score: 0</div>
+            <div id="highScore">High Score: 0</div>
+            <div id="dateTime"></div>
+        </div>
+
+        <!-- Game Canvas -->
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="game-over-screen">
+            <div class="game-over-content">
+                <h2>Game Over</h2>
+                <div id="time">Time: 0s</div>
+                <div id="snakeLength">Snake Length: 1</div>
+                <p id="finalScore"></p>
+                <button id="restartButton" class="btn restart-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="Javascript/index.js" defer></script>
+</body>
+
+</html>
